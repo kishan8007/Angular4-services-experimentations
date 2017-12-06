@@ -65,3 +65,9 @@ use ngrx effects
 ## Sources
 
 * https://github.com/ngrx/platform
+
+
+Let's build an observable data serrvice:
+ng generate component third-page
+ng generate module data-display
+ng generate service shared/space-invaders --module data-display

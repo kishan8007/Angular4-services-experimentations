@@ -17,13 +17,17 @@ import { appRoutes } from './routes';
 // redux router binding
 import { StoreRouterConnectingModule, RouterStateSerializer } from '@ngrx/router-store';
 import { CustomRouterStateSerializer } from './store/router';
+import { ThirdPageComponent } from './third-page/third-page.component';
 
+import { SpaceInvaderService } from './shared/space-invaders.service';
+import { HttpModule } from '@angular/http';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    SecondPageComponent
+    SecondPageComponent,
+    ThirdPageComponent
   ],
   imports: [
     BrowserModule,
@@ -32,7 +36,8 @@ import { CustomRouterStateSerializer } from './store/router';
     RouterModule.forRoot(appRoutes,
       { enableTracing: true } // debugging purposes only
     ),
-    StoreRouterConnectingModule
+    StoreRouterConnectingModule,
+    HttpModule
   ],
   providers: [   
    /**
@@ -40,7 +45,8 @@ import { CustomRouterStateSerializer } from './store/router';
     * A custom RouterStateSerializer is used to parse the `RouterStateSnapshot` provided
     * by `@ngrx/router-store` to include only the desired pieces of the snapshot.
     */
-{ provide: RouterStateSerializer, useClass: CustomRouterStateSerializer },],
+{ provide: RouterStateSerializer, useClass: CustomRouterStateSerializer },
+SpaceInvaderService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

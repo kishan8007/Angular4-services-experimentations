@@ -1,0 +1,26 @@
+{"data": [
+    {
+        "id": 1,
+        "name": "Three invaders",
+        "description": "A 2.3 MB image, the longest download. This image would be the last displayed if there were no synchronisation.",
+        "img": "si1.jpg"
+    },
+    {
+        "id": 2,
+        "name": "Glowing invaders",
+        "description": "A 208 KB image.",
+        "img": "si2.jpg"
+    },
+    {
+        "id": 3,
+        "name": "Japanese Invader",
+        "description": "A 35 KB image, the smallest, so this image would be the first displayed if there were no synchronisation.",
+        "img": "si3.jpg"
+    },
+    {
+        "id": 4,
+        "name": "Space invaders",
+        "description": "A 64 KB image.",
+        "img": "si4.jpg"
+    }
+]}
