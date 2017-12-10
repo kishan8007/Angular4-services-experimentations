@@ -20,7 +20,7 @@ import { PromiseExampleComponent } from './promise-example/promise-example.compo
 
 import { PromiseService } from './shared/promise.service';
 import { HttpModule } from '@angular/http';
-import { FourthPageComponent } from './fourth-page/fourth-page.component';
+import { ObservableExampleComponent } from './observable-example/observable-example.component';
 
 import { HttpClientModule, HttpClientJsonpModule  } from '@angular/common/http';
 import { ObservableService } from "./shared/observable.service";
@@ -30,7 +30,7 @@ import { ObservableService } from "./shared/observable.service";
     AppComponent,
     HomeComponent,
     PromiseExampleComponent,
-    FourthPageComponent
+    ObservableExampleComponent
   ],
   imports: [
     BrowserModule,

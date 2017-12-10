@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { FourthPageComponent } from './fourth-page.component';
+import { ObservableExampleComponent } from './observable-example.component';
 
-describe('FourthPageComponent', () => {
-  let component: FourthPageComponent;
-  let fixture: ComponentFixture<FourthPageComponent>;
+describe('ObservableExampleComponent', () => {
+  let component: ObservableExampleComponent;
+  let fixture: ComponentFixture<ObservableExampleComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ FourthPageComponent ]
+      declarations: [ ObservableExampleComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(FourthPageComponent);
+    fixture = TestBed.createComponent(ObservableExampleComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

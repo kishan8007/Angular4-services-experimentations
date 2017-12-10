@@ -1,0 +1,12 @@
+An array of items is provided here:
+<ul>
+    <li *ngFor="let spaceInvader of spaceInvaders" >
+        {{ spaceInvader.name }}
+    </li>
+</ul>
+An observable of array of items is provided directly thanks to the AsyncPipe notation:
+<ul>
+    <li *ngFor="let spaceObservable of spaceObservables | async" >
+        {{ spaceObservable.name }}
+    </li>
+</ul>

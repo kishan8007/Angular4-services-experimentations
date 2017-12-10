@@ -4,13 +4,13 @@ import { ObservableService } from '../shared/observable.service';
 import { Observable } from 'rxjs/Observable';
 
 @Component({
-  selector: 'app-fourth-page',
-  templateUrl: './fourth-page.component.html',
-  styleUrls: ['./fourth-page.component.css']
+  selector: 'app-observable-example',
+  templateUrl: './observable-example.component.html',
+  styleUrls: ['./observable-example.component.css']
 })
-export class FourthPageComponent implements OnInit {
-  spaceObservables: SpaceInvader[] = [];
-  spaceObservables2: Observable<SpaceInvader[]>;
+export class ObservableExampleComponent implements OnInit {
+  spaceInvaders: SpaceInvader[] = [];
+  spaceObservables: Observable<SpaceInvader[]>;
 
   constructor(private observableService: ObservableService) { }
 
@@ -18,12 +18,12 @@ export class FourthPageComponent implements OnInit {
     //
     this.observableService.getData()
     .subscribe(
-        resultArray => this.spaceObservables = resultArray,
+        resultArray => this.spaceInvaders = resultArray,
         error => console.log("Error :: " + error)
     );
 
     //
-    this.spaceObservables2 = this.observableService.getData();
+    this.spaceObservables = this.observableService.getData();
   }
 
 }

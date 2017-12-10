@@ -26,3 +26,7 @@ The following libraries are included, but the store is not necessary in this con
 - @angular/router
 - @ngrx/router-store
 
+
+## todo
+
+AsyncPipe for promise

@@ -2,10 +2,10 @@ import { Routes } from '@angular/router';
 
 import { HomeComponent } from './home/home.component';
 import { PromiseExampleComponent } from './promise-example/promise-example.component';
-import { FourthPageComponent } from './fourth-page/fourth-page.component';
+import { ObservableExampleComponent } from './observable-example/observable-example.component';
 
 export const appRoutes: Routes = [
     { path: '', component: HomeComponent },
     { path: 'promise-example', component: PromiseExampleComponent },
-    { path: 'fourth-page', component: FourthPageComponent }
+    { path: 'observable-example', component: ObservableExampleComponent }
   ];
