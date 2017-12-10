@@ -21,13 +21,18 @@ import { ThirdPageComponent } from './third-page/third-page.component';
 
 import { SpaceInvaderService } from './shared/space-invaders.service';
 import { HttpModule } from '@angular/http';
+import { FourthPageComponent } from './fourth-page/fourth-page.component';
+
+import { HttpClientModule, HttpClientJsonpModule  } from '@angular/common/http';
+import { SpaceObservablesService } from "./shared/space-observables.service";
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     SecondPageComponent,
-    ThirdPageComponent
+    ThirdPageComponent,
+    FourthPageComponent
   ],
   imports: [
     BrowserModule,
@@ -37,7 +42,9 @@ import { HttpModule } from '@angular/http';
       { enableTracing: true } // debugging purposes only
     ),
     StoreRouterConnectingModule,
-    HttpModule
+    HttpModule,
+    HttpClientModule,
+    HttpClientJsonpModule
   ],
   providers: [   
    /**
@@ -46,7 +53,8 @@ import { HttpModule } from '@angular/http';
     * by `@ngrx/router-store` to include only the desired pieces of the snapshot.
     */
 { provide: RouterStateSerializer, useClass: CustomRouterStateSerializer },
-SpaceInvaderService],
+SpaceInvaderService,
+SpaceObservablesService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

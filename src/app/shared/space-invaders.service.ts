@@ -5,7 +5,7 @@ import { SpaceInvader } from './space-invader';
 
 @Injectable()
 export class SpaceInvaderService {
-  spaceInvadersURL: string = '../assets/space_invaders.json';
+  private spaceInvadersURL: string = '../assets/space_invaders.json';
 
   constructor(private http: Http) { }
 
@@ -20,7 +20,6 @@ export class SpaceInvaderService {
       })
       .catch(this.handleError);
   }
-
 
   private handleError(error: any): Promise<any> {
     console.error('An error occurred', error);
