@@ -1,4 +1,4 @@
-# AngularReduxRouterTrial
+# Angular4 services experimentations
 
 This project aims at presenting many different ways to create a service to insert data into a Single-Page Application (SPA) in order to study different mechanisms and necessary components.
 
