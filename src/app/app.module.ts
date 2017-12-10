@@ -23,7 +23,7 @@ import { HttpModule } from '@angular/http';
 import { FourthPageComponent } from './fourth-page/fourth-page.component';
 
 import { HttpClientModule, HttpClientJsonpModule  } from '@angular/common/http';
-import { SpaceObservablesService } from "./shared/space-observables.service";
+import { ObservableService } from "./shared/observable.service";
 
 @NgModule({
   declarations: [
@@ -52,7 +52,7 @@ import { SpaceObservablesService } from "./shared/space-observables.service";
     */
     { provide: RouterStateSerializer, useClass: CustomRouterStateSerializer },
     PromiseService,
-    SpaceObservablesService
+    ObservableService
   ],
   bootstrap: [AppComponent]
 })

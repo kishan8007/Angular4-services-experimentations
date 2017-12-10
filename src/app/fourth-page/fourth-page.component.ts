@@ -1,6 +1,6 @@
 import { SpaceInvader } from './../shared/space-invader';
 import { Component, OnInit } from '@angular/core';
-import { SpaceObservablesService } from '../shared/space-observables.service';
+import { ObservableService } from '../shared/observable.service';
 import { Observable } from 'rxjs/Observable';
 
 @Component({
@@ -12,19 +12,18 @@ export class FourthPageComponent implements OnInit {
   spaceObservables: SpaceInvader[] = [];
   spaceObservables2: Observable<SpaceInvader[]>;
 
-  constructor(private spaceObservablesService: SpaceObservablesService,
-    private spaceObservablesService2: SpaceObservablesService) { }
+  constructor(private observableService: ObservableService) { }
 
   ngOnInit() {
-    this.spaceObservablesService.getData()
+    //
+    this.observableService.getData()
     .subscribe(
         resultArray => this.spaceObservables = resultArray,
         error => console.log("Error :: " + error)
     );
 
-
-    this.spaceObservables2 = this.spaceObservablesService.getData2();
-    console.log(this.spaceObservables2);
+    //
+    this.spaceObservables2 = this.observableService.getData();
   }
 
 }
