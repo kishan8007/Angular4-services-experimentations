@@ -11,7 +11,6 @@ import { reducers } from './store';
 // router
 import { RouterModule } from '@angular/router';
 import { HomeComponent } from './home/home.component';
-import { SecondPageComponent } from './second-page/second-page.component';
 import { appRoutes } from './routes';
 
 // redux router binding
@@ -30,7 +29,6 @@ import { SpaceObservablesService } from "./shared/space-observables.service";
   declarations: [
     AppComponent,
     HomeComponent,
-    SecondPageComponent,
     ThirdPageComponent,
     FourthPageComponent
   ],

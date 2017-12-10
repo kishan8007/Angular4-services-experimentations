@@ -1,14 +1,6 @@
-// import {Action} from '@ngrx/store';
-
 import { ActionReducerMap } from '@ngrx/store';
-
-import { HomeState, counterReducer } from './home';
-import { SecondPageState, counter2Reducer } from './second-page';
-
 import { RouterReducerState, routerReducer, RouterStateSerializer } from '@ngrx/router-store';
-
 import { Params, RouterStateSnapshot } from '@angular/router';
-
 import * as fromRouter from '@ngrx/router-store'; 
 
 /** 
@@ -17,8 +9,6 @@ import * as fromRouter from '@ngrx/router-store';
  */
 export interface State {
     routerReducer: fromRouter.RouterReducerState<RouterStateUrl>;
-    counter: number;
-    counter2: number;
 }
 
 export interface RouterStateUrl {
@@ -32,9 +22,7 @@ export interface RouterStateUrl {
  * and the current or initial state and return a new immutable state.
  */
 export const reducers: ActionReducerMap<State> = {
-  routerReducer: fromRouter.routerReducer,
-  counter: counterReducer,
-  counter2: counter2Reducer,
+  routerReducer: fromRouter.routerReducer
 };
 
 
