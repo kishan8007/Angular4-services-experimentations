@@ -1,0 +1,13 @@
+<p>
+  fourth-page works!
+</p>
+<ul id="todo-list">
+    <li *ngFor="let spaceObservable of spaceObservables" >
+        {{ spaceObservable.name }}
+    </li>
+</ul>
+<ul id="todo-list2">
+    <li *ngFor="let spaceObservable2 of spaceObservables2 | async" >
+        {{ spaceObservable2.name }}
+    </li>
+</ul>
