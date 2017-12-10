@@ -16,9 +16,9 @@ import { appRoutes } from './routes';
 // redux router binding
 import { StoreRouterConnectingModule, RouterStateSerializer } from '@ngrx/router-store';
 import { CustomRouterStateSerializer } from './store/router';
-import { ThirdPageComponent } from './third-page/third-page.component';
+import { PromiseExampleComponent } from './promise-example/promise-example.component';
 
-import { SpaceInvaderService } from './shared/space-invaders.service';
+import { PromiseService } from './shared/promise.service';
 import { HttpModule } from '@angular/http';
 import { FourthPageComponent } from './fourth-page/fourth-page.component';
 
@@ -29,7 +29,7 @@ import { SpaceObservablesService } from "./shared/space-observables.service";
   declarations: [
     AppComponent,
     HomeComponent,
-    ThirdPageComponent,
+    PromiseExampleComponent,
     FourthPageComponent
   ],
   imports: [
@@ -44,15 +44,16 @@ import { SpaceObservablesService } from "./shared/space-observables.service";
     HttpClientModule,
     HttpClientJsonpModule
   ],
-  providers: [   
+  providers: [
    /**
     * The `RouterStateSnapshot` provided by the `Router` is a large complex structure.
     * A custom RouterStateSerializer is used to parse the `RouterStateSnapshot` provided
     * by `@ngrx/router-store` to include only the desired pieces of the snapshot.
     */
-{ provide: RouterStateSerializer, useClass: CustomRouterStateSerializer },
-SpaceInvaderService,
-SpaceObservablesService],
+    { provide: RouterStateSerializer, useClass: CustomRouterStateSerializer },
+    PromiseService,
+    SpaceObservablesService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

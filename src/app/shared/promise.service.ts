@@ -4,18 +4,16 @@ import { Headers, Http, Response } from '@angular/http';
 import { SpaceInvader } from './space-invader';
 
 @Injectable()
-export class SpaceInvaderService {
+export class PromiseService {
   private spaceInvadersURL: string = '../assets/space_invaders.json';
 
   constructor(private http: Http) { }
 
   getSpaceInvaders(): Promise<Array<SpaceInvader>> {
-    console.log('getSpaceInvaders(): Promise<Array<SpaceInvader>>');
     return this.http
       .get(this.spaceInvadersURL)
       .toPromise()
       .then((response) => {
-        console.log(response);
         return response.json().data as SpaceInvader[];
       })
       .catch(this.handleError);
