@@ -9,7 +9,8 @@ export class PromiseService {
 
   constructor(private http: Http) { }
 
-  getSpaceInvaders(): Promise<Array<SpaceInvader>> {
+  // also works: getSpaceInvaders(): Promise<Array<SpaceInvader>> {
+  getSpaceInvaders(): Promise<SpaceInvader[]> {
     return this.http
       .get(this.spaceInvadersURL)
       .toPromise()

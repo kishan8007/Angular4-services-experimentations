@@ -10,13 +10,17 @@ import { SpaceInvader } from '../shared/space-invader';
 })
 export class PromiseExampleComponent implements OnInit {
   spaceInvaders: SpaceInvader[];
+  spaceInvadersPromise: Promise<SpaceInvader[]>;
   error: any;
 
   constructor( private promiseService: PromiseService ) { }
 
   ngOnInit() {
     this.getSpaceInvaders();
-    console.log(this.spaceInvaders);
+    console.log(this.spaceInvaders); // 
+
+    this.spaceInvadersPromise = this.promiseService.getSpaceInvaders();
+
   }
 
   getSpaceInvaders(): void {

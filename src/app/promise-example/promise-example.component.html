@@ -1,5 +1,12 @@
+Example receiving an array directly
 <ul>
   <li *ngFor="let spaceInvader of spaceInvaders" >
+    <span>{{ spaceInvader.name }}</span> 
+  </li>
+</ul>
+Example where the view receives an observable thanks an AsyncPipe
+<ul>
+  <li *ngFor="let spaceInvader of spaceInvadersPromise | async" >
     <span>{{ spaceInvader.name }}</span> 
   </li>
 </ul>
